@@ -1,0 +1,15 @@
+#this program count the odd numbers
+def main() :
+    CountOdd = 0
+    #declaration for the odd counter
+    n = int(input("please enter a positive number : "))
+    #to take a positive number from the user
+    if n >= 0: 
+    #if condition to make a loop
+        for i in range(n+1):
+        #for loop, starting from 0 and using the user number + 1 as an end to count the odd numbers 
+            if i % 2 != 0 :
+                CountOdd += 1
+                #if the mod of i not equal to zero increase CountOdd
+        print(f"the amount of odds number from (0 to {n}) is : {CountOdd}")
+            #print Count of an odd number/s
