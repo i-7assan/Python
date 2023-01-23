@@ -1,0 +1,71 @@
+#Python
+#Main function
+def main():
+    #The month list
+    Month_lis= ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    #Empty list
+    userlist=[0,0,0,0,0,0,0,0,0,0,0,0]
+    #Loop to fill the empty list from the user
+    for i in range(12):
+	    print("Enter the sale for", Month_lis[i] +":")
+	    #Get the value from the user
+	    userlist[i]=int(input())
+	#Method to calculate the sum of the sales
+    s=sum(userlist)
+    #Calculate the avrage of the sales
+    Avg= s/ len(Month_lis)
+    #Method to calculate the maximum amount of the sales
+    maxpos = userlist.index(max(userlist))
+    #Method to calculate the minimum amount of the sales
+    minpos = userlist.index(min(userlist))
+    #Print the total sales
+    print("Total sales: ", s)
+    #Print the Average sales
+    print("Average sales:", Avg)
+    #Print the Highest sales
+    print("Highest sales:",Month_lis[maxpos])
+    #Print the Lowest sales
+    print("Lowest sales:",Month_lis[minpos])
+
+main()
+
+
+#Other approach:
+#Main function
+def main():
+    #The month list
+    Month_lis= ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    #Empty list
+    userlist=[0,0,0,0,0,0,0,0,0,0,0,0]
+    #Variable to calculate the highest sale
+    hi=""
+    #Variable to calculate the Lowest sale
+    low=""
+    num=0
+    #Loop to fill the empty list from the user
+    for i in range(12):
+    	print("Enter the sale for", Month_lis[i] +":")
+    	#Get the value from the user
+    	userlist[i]=int(input())
+	   #If statement to calculate the Highest and Lowest of the sales
+    	if (num < userlist[i]|num == userlist[i]):
+	        num = userlist[i]
+	        hi= Month_lis[i]
+    	if (num > userlist[i]):
+	        low= Month_lis[i]
+	
+	#Calculte the sum of the sales
+    s=sum(userlist)
+    #Calculate the avrage of the sales
+    Avg= s/ len(Month_lis)
+    #Print the total sales
+    print("Total sales:", s)
+    #Print the Average sales
+    print("Average sales:", Avg)
+    #Print the Highest sales
+    print("Highest sales:", hi)
+    #Print the Lowest sales
+    print("Lowest sales:", low)
+
+main()
+
