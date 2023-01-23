@@ -1,0 +1,33 @@
+#create the function
+def num_List():
+# Create an empty list
+    num_List=[]
+    while True:
+        print("Enter a positive integer, any negative integer to stop:")
+        num= int(input())
+        if num <0:
+            break
+        # Append each number at the end of list
+        num_List.append(num)
+    return num_List
+#To print the list call the function
+#print(num_List())
+
+# Create an empty list
+usr_List=[]
+#Create an empty list for multiple of either 3 or 7
+multiple37_List=[]
+usr_List=num_List()
+# Get list length
+length=len(usr_List)
+#For loop to access each value in the list
+for i in range(0,length):
+    #If statement to get only the multiple of 3,7 from the lis
+    if (usr_List[i]%7==0 or usr_List[i]%3==0):
+        #If statement to exclude 3,7 from the lis
+        if (usr_List[i]!=7 and usr_List[i]!=3):
+        #add the value to the empty list
+            multiple37_List.append(usr_List[i])
+
+#To print the multiple of either 3 or 7 list
+print(multiple37_List)
